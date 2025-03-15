@@ -153,7 +153,7 @@ const Home = () => {
             LinkedIn
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://GaneshN523.github.io/resumes/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.heroButton}
