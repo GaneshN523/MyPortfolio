@@ -79,7 +79,7 @@ const Home = () => {
       id: 5,
       image: Projects, // No image: fallback to black background with name.
       name: 'Projects',
-      link: '/projects',
+      link: 'https://ganeshn523.github.io/projects',
     },
   ];
 
