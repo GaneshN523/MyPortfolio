@@ -1,0 +1,88 @@
+/* Footer container with a dark gradient background and neon green accents */
+.footer {
+    background: linear-gradient(45deg, #000, #1a1a1a);
+    color: #00ff00;
+    padding: 40px 20px;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  /* Main content container to center and space sections */
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Company info section */
+  .companyInfo {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+  }
+  
+  .companyName {
+    font-size: 2rem;
+    margin: 0;
+    color: #00ff00;
+  }
+  
+  .companyDesc {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #00ff00;
+  }
+  
+  /* Navigation links section */
+  .footerLinks {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .footerLink {
+    color: #00ff00;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLink:hover {
+    color: #00cc00;
+  }
+  
+  /* Social links section */
+  .socialLinks {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .socialLink {
+    color: #00ff00;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLink:hover {
+    color: #00cc00;
+  }
+  
+  /* Footer bottom: centered copyright with a top border */
+  .footerBottom {
+    text-align: center;
+    border-top: 1px solid #00ff00;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .copyRight {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
