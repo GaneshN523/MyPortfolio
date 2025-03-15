@@ -12,10 +12,10 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.footerLinks}>
-          <a href="/MyPortfolio/about" className={styles.footerLink}>
+          <a href="/MyPortfolio/#/about" className={styles.footerLink}>
             About
           </a>
-          <a href="/MyPortfolio/contact" className={styles.footerLink}>
+          <a href="/MyPortfolio/#/contact" className={styles.footerLink}>
             Contact
           </a>
 
