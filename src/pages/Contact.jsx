@@ -5,7 +5,7 @@ const Contact = () => {
   // Read-only contact details (no button)
   const contactDetails = [
     { label: 'Email', value: 'ganeshnalawade523@gmail.com' },
-    { label: 'Phone', value: '+91 8806643329' },
+    { label: 'Phone', value: '+91 8806643429' },
     { label: 'Address', value: '301 Tarangan Near Nagarpanchayat, Shirala 415 408, Sangli, Maharashtra' },
   ];
 
