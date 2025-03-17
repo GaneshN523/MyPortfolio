@@ -91,12 +91,13 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
 
+  // Changed dependency array here to ensure the slider doesn't go blank when remounting
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
     }, 1500);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
