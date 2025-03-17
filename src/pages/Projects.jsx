@@ -11,7 +11,7 @@ const projectsData = [
     id: 1,
     name: 'IntelligentSense Bot',
     image: intelligentsensebot,
-    visitUrl: 'https://ganeshshubh.github.io/CollegeAssist/',
+    visitUrl: 'https://huggingface.co/spaces/GaneshN523/Institute',
     codeUrl: 'https://huggingface.co/spaces/GaneshN523/Institute/tree/main',
   },
   {
