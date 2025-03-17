@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './Projects.module.css';
 import intelligentsensebot from '../assets/Projects/intelligentsensebot.jfif'
+import FirmManagement from '../assets/Projects/FirmManagement.webp'
+import ProgrammingVisualizer from '../assets/Projects/ProgrammingVisualizer.webp'
+import SQLVisualizer from '../assets/Projects/SQLVisualizer.webp'
 
 // Sample projects data
 // Sample projects data
@@ -14,22 +17,22 @@ const projectsData = [
     },
     {
       id: 2,
-      name: 'Project 2',
-      image: 'https://via.placeholder.com/400',
+      name: 'FirmManagement',
+      image: FirmManagement,
       visitUrl: 'https://GaneshN523.github.io/FirmManagement/',
       codeUrl: 'https://github.com/GaneshN523/FirmManagement/',
     },
     {
       id: 3,
-      name: 'Project 3',
-      image: 'https://via.placeholder.com/400',
+      name: 'Programming Visualizer',
+      image: ProgrammingVisualizer,
       visitUrl: 'https://GaneshN523.github.io/prog-vi/',
       codeUrl: 'https://github.com/GaneshN523/prog-vi/',
     },
     {
       id: 4,
-      name: 'Project 4',
-      image: 'https://via.placeholder.com/400',
+      name: 'SQL Visualizer',
+      image: SQLVisualizer,
       visitUrl: 'https://GaneshN523.github.io/sql-vi/',
       codeUrl: 'https://github.com/GaneshN523/sql-vi/',
     },
