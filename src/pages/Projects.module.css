@@ -1,142 +1,176 @@
+/* Hacker-style heading */
+.hackerText {
+  color: #0f0;
+  font-family: monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 80px; /* Ensure it's visible below 80px navbar */
+  text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+  animation: flicker 2s infinite;
+  background-color: black;
+  border: 2px solid green;
+}
+
+/* Simple flicker animation */
+@keyframes flicker {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
 /* Responsive Grid Layout */
 .projectsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive columns */
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-    width: 95vw;
-    max-width: 100vw;
-    margin: 0 auto;
-    margin-left: 2vw;
-    margin-top: 80px;
-    margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptive columns */
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  width: 95vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  margin-top: 40px; /* Slight extra spacing below heading */
+  margin-bottom: 480px;
+  width: 100vw;
+  margin-left: 100px;
+}
+
+/* Project Card Styling */
+.projectCard {
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  background-color: #000;
+  border: 2px solid #0f0;
+  border-radius: 12px; /* Smooth edges */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+/* Image Container */
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+/* Glassmorphism Overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons Styling */
+.buttonsContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.button {
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background: #0f0;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Project Name Styling */
+.projectName {
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  color: #0f0;
+  text-align: center;
+  text-shadow: 0 0 8px #0f0;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 15px;
+    margin-left: 0;
   }
-  
-  /* Project Card Styling */
+
   .projectCard {
-    width: 100%;
-    max-width: 450px;
-    height: 400px;
-    background-color: #000;
-    border: 2px solid #0f0;
-    border-radius: 12px; /* Smooth edges */
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 350px;
+    height: 380px;
   }
-  
-  .projectCard:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-  }
-  
-  /* Image Container */
-  .imageContainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .projectImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .projectCard:hover .projectImage {
-    transform: scale(1.1);
-  }
-  
-  /* Glassmorphism Overlay */
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 10px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Buttons Styling */
-  .buttonsContainer {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  
+
   .button {
-    color: #0f0;
-    border: 1px solid #0f0;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.7);
-    transition: background 0.3s, color 0.3s, transform 0.3s;
+    padding: 6px 12px;
   }
-  
-  .button:hover {
-    background: #0f0;
-    color: #000;
-    transform: translateY(-2px);
-  }
-  
-  /* Project Name Styling */
+
   .projectName {
-    font-size: 20px;
-    font-family: monospace;
-    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hackerText {
     color: #0f0;
+    font-family: monospace;
+    font-size: 1.5rem;
     text-align: center;
-    text-shadow: 0 0 8px #0f0;
+    margin-top: 80px; /* Keep 80px margin on mobile as well */
+    text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+    animation: flicker 2s infinite;
+    background-color: black;
+    border: 2px solid green;
   }
-  
-  /* Responsive Design Adjustments */
-  @media (max-width: 1024px) {
-    .projectsGrid {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      padding: 15px;
-    }
-  
-    .projectCard {
-      max-width: 350px;
-      height: 380px;
-    }
-  
-    .button {
-      padding: 6px 12px;
-    }
-  
-    .projectName {
-      font-size: 18px;
-    }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  
-  @media (max-width: 600px) {
-    .projectsGrid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-  
-    .projectCard {
-      max-width: 80%;
-      height: 320px;
-      margin: 0 auto;
-    }
-  
-    .button {
-      padding: 5px 10px;
-    }
-  
-    .projectName {
-      font-size: 16px;
-    }
+
+  .projectCard {
+    max-width: 80%;
+    height: 320px;
+    margin: 0 auto;
   }
-  
+
+  .button {
+    padding: 5px 10px;
+  }
+
+  .projectName {
+    font-size: 16px;
+  }
+}
