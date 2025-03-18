@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="Logo" className={styles.logo} />
-        <span className={styles.siteName}>MyPortfolio</span>
+        <span className={styles.siteName}>Ganesh Nalawade</span>
       </div>
 
       <div className={styles.menuIcon} onClick={toggleMenu}>
