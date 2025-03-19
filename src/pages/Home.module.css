@@ -1,9 +1,10 @@
 /* ---------- General Home Styles ---------- */
 .home {
   width: 100%;
-  background: linear-gradient(45deg, #7d9f7d, #3d3d3d, #a0a0a0);
+  overflow-x: hidden;
+  background: linear-gradient(45deg, rgba(125,159,125,0.5), rgba(61,61,61,0.5), rgba(160,160,160,0.5));
   color: #fff;
-  font-family: 'Times New Roman', serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -12,25 +13,32 @@
   text-align: center;
   font-size: 2.5rem; /* Adjust rem value as needed */
   margin: 20px 0;
-  height: 0px;
-  margin-bottom: 0px;
+  height: 0;
+  margin-bottom: 50px;
   padding-bottom: 10px;
+}
+
+.subtitle2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #fff;
 }
 
 /* ---------- HERO SECTION ---------- */
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 40vh;
-  background: linear-gradient(45deg, rgba(125,159,125,0.5), rgba(61,61,61,0.5), rgba(160,160,160,0.5));
+  background: linear-gradient(45deg, rgba(125,159,125,0.35), rgba(61,61,61,0.35), rgba(160,160,160,0.35));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px 20px;
   margin-top: 60px; /* Positioned below a 60px navbar */
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-bottom: 2px solid rgba(204,204,204,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .heroContainer {
@@ -41,6 +49,7 @@
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .heroImageContainer {
@@ -54,9 +63,9 @@
   max-width: 220px;
   border-radius: 50%;
   transition: transform 0.3s ease, filter 0.3s ease;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   filter: brightness(1.1) contrast(1.2);
-  border: 4px solid #333;
+  border: 4px solid #fff;
 }
 
 .heroImage:hover {
@@ -74,21 +83,21 @@
 .name {
   font-size: 2.8rem;
   color: #fff;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   margin: 0;
 }
 
 .education {
   font-size: 1.5rem;
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
 }
 
 .typingEffect {
   font-size: 1.5rem;
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -114,10 +123,11 @@
   margin-top: 60px;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .heroButton {
-  background: linear-gradient(45deg, rgba(60,60,60,0.95), rgba(80,80,80,0.95));
+  background: linear-gradient(45deg, rgba(50, 50, 50, 0.95), rgba(80, 80, 80, 0.95));
   color: #fff;
   border: 1px solid #fff;
   padding: 15px 30px;
@@ -127,15 +137,42 @@
   width: 480px;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .heroButton:hover {
   transform: scale(1.05);
-  background: linear-gradient(45deg, rgba(70,70,70,0.95), rgba(90,90,90,0.95));
+  background: linear-gradient(45deg, rgba(70, 70, 70, 0.95), rgba(100, 100, 100, 0.95));
 }
 
-/* ---------- SLIDER SECTION ---------- */
+/* Responsive adjustments for Hero */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    margin-top: 60px;
+  }
+  .heroContainer {
+    grid-template-columns: 1fr;
+  }
+  .heroImage {
+    width: 40%;
+    max-width: 150px;
+    height: 200px;
+    margin-bottom: -80px;
+  }
+  .heroButtons {
+    border-top: solid 2px #fff;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 32px;
+  }
+  .heroButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ---------- GRID SECTION (Replaces Slider) ---------- */
 .sliderSection {
   padding: 40px 0;
 }
@@ -143,168 +180,68 @@
 .sliderContainer {
   width: 100%;
   display: grid;
-  grid-template-rows: auto auto;
   justify-items: center;
   margin-top: 40px;
-  background-color: #000;
+  background: linear-gradient(45deg, rgba(125,159,125,0.5), rgba(61,61,61,0.5), rgba(160,160,160,0.5));
   border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
-.sliderWrapper {
-  width: 1640px; /* Adjusted for 3 cards (400px each) and gaps */
-  height: 280px;
-  overflow: hidden;
-  position: relative;
-  padding-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .sliderWrapper {
-    width: 640px; /* 3 cards of 200px + 2 gaps */
-    height: 200px;
-  }
-}
-
-.slider {
+/* Grid wrapper for cards: two rows of 3 cards per row */
+.gridWrapper {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 400px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-@media (max-width: 768px) {
-  .slider {
-    grid-auto-columns: 200px;
-  }
-}
-
+/* Card styles */
 .card {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 0;
+  padding-bottom: 100%; /* maintain square aspect ratio */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 4px solid #333;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+  border: 4px solid #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  display: grid;
-  place-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.7);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
 }
 
 .cardOverlay {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 20px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   font-size: 1rem;
   text-align: center;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
-  border-radius: 0 0 5px 5px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
-.arrows {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 20px;
-  width: 1640px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
+/* Responsive adjustments for Grid */
 @media (max-width: 768px) {
-  .arrows {
-    width: 640px;
+  .gridWrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.arrow {
-  background: none;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.arrow:hover {
-  transform: scale(1.1);
-}
-
-/* ---------- Additional Responsive Adjustments for Modern Smartphones ---------- */
 @media (max-width: 480px) {
-  .hero {
-    min-height: 60vh;
-    padding: 20px 10px;
-  }
-  
-  .heroContainer {
+  .gridWrapper {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .heroImage {
-    width: 60%;
-    max-width: 120px;
-    height: auto;
-    margin-bottom: -20px;
-  }
-  
-  .heroInfoContainer {
-    padding: 5px;
-  }
-  
-  .name {
-    font-size: 2rem;
-  }
-  
-  .education,
-  .typingEffect {
-    font-size: 1.2rem;
-  }
-  
-  .heroButtons {
-    gap: 20px;
-    flex-wrap: wrap;
-    padding-top: 20px;
-  }
-  
-  .heroButton {
-    width: 100%;
-    max-width: 250px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-  
-  .sliderWrapper {
-    width: 100%;
-    height: 180px;
-    padding-top: 10px;
-  }
-  
-  .slider {
-    grid-auto-columns: 150px;
-    gap: 10px;
-  }
-  
-  .arrows {
-    width: 100%;
-  }
-  
-  .arrow {
-    font-size: 1.5rem;
   }
 }
