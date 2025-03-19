@@ -1,112 +1,111 @@
 /* Contact Section Styles */
 .contact {
-    background: linear-gradient(45deg, rgba(90,125,90,0.3), rgba(34,34,34,0.3), rgba(119,119,119,0.3));
-    padding: 60px 20px;
-    color: #00ff00;
-    font-family: 'Times New Roman', serif;
-    text-align: center;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: -100px;
-    margin-bottom: -50px;
-  }
-  
-  /* Title styling */
-  .title {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 2px rgba(0,255,0,0.7);
-  }
-  
-  /* Container for both lists; occupies at least 60% of page width */
-  .listsContainer {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  /* Section title for each list */
-  .sectionTitle {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 1px rgba(0,255,0,0.7);
-  }
-  
-  /* List styling: one column grid with a gap between items */
-  .infoList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  /* Each list item styled with a semi-transparent background, neon border and shadow */
-  .infoItem {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,255,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Label styling */
-  .label {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  /* Value styling */
-  .value {
-    font-size: 1.2rem;
-  }
-  
-  /* Visit button styling for social media fields */
-  .visitButton {
-    background: linear-gradient(45deg, rgba(0,50,0,0.9), rgba(0,80,0,0.9));
-    border: 2px solid #00ff00;
-    color: #00ff00;
-    padding: 8px 16px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .visitButton:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, rgba(0,70,0,0.9), rgba(0,100,0,0.9));
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .title {
+  background: linear-gradient(45deg, rgba(125,159,125,0.5), rgba(61,61,61,0.5), rgba(160,160,160,0.5));
+  padding: 60px 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Title styling */
+.contact .title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for both lists; occupies a fixed width on desktop */
+.listsContainer {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+/* Section title for each list */
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* List styling: one column grid with a gap between items */
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Each list item styled with a semi-transparent background, subtle border and shadow */
+.infoItem {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Label styling */
+.label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Value styling */
+.value {
+  font-size: 1.2rem;
+}
+
+/* Visit button styling for social media fields */
+.visitButton {
+  background: linear-gradient(45deg, rgba(50,50,50,0.9), rgba(80,80,80,0.9));
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.visitButton:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, rgba(70,70,70,0.9), rgba(100,100,100,0.9));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact .title {
       font-size: 2.5rem;
-    }
-    .listsContainer {
+  }
+  .listsContainer {
       width: 90%;
-    }
-    .sectionTitle {
+  }
+  .sectionTitle {
       font-size: 1.8rem;
-    }
-    .infoItem {
+  }
+  .infoItem {
       flex-direction: column;
       gap: 10px;
-    }
-    .label, .value {
+  }
+  .label, .value {
       font-size: 1rem;
-    }
-    .visitButton {
+  }
+  .visitButton {
       font-size: 0.9rem;
       padding: 6px 12px;
-    }
   }
-  
+}
