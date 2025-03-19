@@ -49,7 +49,7 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [displayedText, typing, currentSkillIndex, skills]);
 
-  // ==== GRID SECTION (replacing Slider) ====
+  // ==== SLIDER SECTION LOGIC ====
   const sliderCards = [
     {
       id: 1,
@@ -77,11 +77,54 @@ const Home = () => {
     },
     {
       id: 5,
-      image: Projects, // Fallback to background if no image.
+      image: Projects, // No image: fallback to black background with name.
       name: 'Projects',
       link: '/MyPortfolio/#/projects',
     },
   ];
+
+  const visibleCount = 3;
+  // Extend cards array by cloning the first "visibleCount" cards for continuous loop
+  const extendedCards = [...sliderCards, ...sliderCards.slice(0, visibleCount)];
+  const cardWidth = window.innerWidth <= 768 ? 200 : 400;
+  const gap = 20;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+
+  // Changed dependency array here to ensure the slider doesn't go blank when remounting
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const handlePrev = () => {
+    if (currentIndex === 0) {
+      setTransitionEnabled(false);
+      setCurrentIndex(sliderCards.length);
+      setTimeout(() => {
+        setTransitionEnabled(true);
+        setCurrentIndex(sliderCards.length - 1);
+      }, 50);
+    } else {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const handleTransitionEnd = () => {
+    if (currentIndex === sliderCards.length) {
+      setTransitionEnabled(false);
+      setCurrentIndex(0);
+      setTimeout(() => {
+        setTransitionEnabled(true);
+      }, 50);
+    }
+  };
 
   return (
     <div className={styles.home}>
@@ -121,26 +164,44 @@ const Home = () => {
         </div>
       </section>
 
-      {/* GRID SECTION */}
+      {/* SLIDER SECTION */}
       <h2 className={styles.subtitle}>My Work</h2>
-      <h3 className={styles.subtitle2}>Click on the cards below to open up the particular section</h3>
       <section className={styles.sliderSection}>
-        <div className={styles.gridContainer}>
-          {sliderCards.map((card) => (
-            <a
-              key={card.id}
-              href={card.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.card}
+        <div className={styles.sliderContainer}>
+          <div className={styles.sliderWrapper}>
+            <div
+              className={styles.slider}
               style={{
-                backgroundImage: card.image ? `url(${card.image})` : 'none',
-                backgroundColor: card.image ? 'transparent' : '#ccc',
+                transform: `translateX(-${currentIndex * (cardWidth + gap)}px)`,
+                transition: transitionEnabled ? 'transform 0.5s ease-in-out' : 'none',
               }}
+              onTransitionEnd={handleTransitionEnd}
             >
-              <div className={styles.cardOverlay}>{card.name}</div>
-            </a>
-          ))}
+              {extendedCards.map((card, index) => (
+                <a
+                  key={index}
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.card}
+                  style={{
+                    backgroundImage: card.image ? `url(${card.image})` : 'none',
+                    backgroundColor: card.image ? 'transparent' : 'black',
+                  }}
+                >
+                  <div className={styles.cardOverlay}>{card.name}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className={styles.arrows}>
+            <button className={styles.arrow} onClick={handlePrev}>
+              &#10094;
+            </button>
+            <button className={styles.arrow} onClick={handleNext}>
+              &#10095;
+            </button>
+          </div>
         </div>
       </section>
     </div>
