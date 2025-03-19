@@ -204,8 +204,10 @@
     margin: 0 auto;
   }
 
-  .card{
-    height: 200px;
+  .card {
+    /* For tablets, you may keep the original aspect ratio or adjust as needed */
+    height: auto;
+    padding-bottom: 60%;
   }
 
   .heroImage {
@@ -234,6 +236,7 @@
     margin: 0 auto;
   }
   .hero {
+    margin-top: 40px; /* Reduced top margin */
     min-height: 60vh;
     padding: 20px 10px;
   }
@@ -252,22 +255,22 @@
 
   .heroButtons {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px; /* Reduced gap between buttons */
+    margin-top: 10px; /* Reduced vertical spacing */
   }
 
   .gridContainer {
     grid-template-columns: 1fr;
     width: 100%;
-    padding: 10px;
-    gap: 10px;
+    padding: 5px; /* Reduced padding */
+    gap: 5px; /* Reduced gap between cards */
   }
   
   .card {
-    padding-bottom: 100%;
+    padding-bottom: 100%; /* Makes card a perfect square */
     width: 90%;
     max-width: 180px;
-    height: 200px;
+    /* Removed fixed height to allow the padding-bottom trick to work */
   }
 
   .typingEffect {
