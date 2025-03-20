@@ -1,0 +1,13 @@
+/* Reset margins and paddings to remove extra space */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    background: linear-gradient(45deg, rgba(125,159,125,0.5), rgba(61,61,61,0.5), rgba(160,160,160,0.5));
+  }
+  
