@@ -1,12 +1,57 @@
-# React + Vite
+Grod LLM Chatbot Suite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a collection of AI-powered chatbots built using the Grod LLM, with Python for backend processing and Streamlit for the frontend interface. The chatbots are designed to assist users in various domains, offering seamless interactions and intelligent responses.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+AI-powered chatbots using Grod LLM
 
-## Expanding the ESLint configuration
+Intuitive frontend built with Streamlit
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Real-time interactions and intelligent responses
+
+Modular architecture for easy expansion
+
+Secure and scalable backend
+
+📌 Applications
+
+1️⃣ CollegeAssist
+
+A chatbot designed to help students with academic queries, course information, and campus-related assistance.
+
+2️⃣ DepoMaster
+
+An AI assistant for managing warehouse and inventory operations, optimizing logistics, and tracking stock levels.
+
+3️⃣ StationMaster
+
+A chatbot tailored for railway station inquiries, providing train schedules, platform details, and ticket booking guidance.
+
+4️⃣ ChatCenter
+
+A general-purpose chatbot that facilitates discussions, FAQs, and customer support for various domains.
+
+🛠️ Installation & Setup
+
+Prerequisites
+
+Ensure you have the following installed:
+
+Python 3.8+
+
+pip
+
+Streamlit
+
+Grod LLM API access
+
+Steps to Run the Project
+
+Clone the repository:
+
+Install dependencies:
+
+Set up environment variables for Grod LLM API keys.
+
+Run the chatbot application:
