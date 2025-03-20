@@ -16,7 +16,7 @@ const About = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>About Me</h1>
           <p className={styles.description}>
-            I am Ganesh Nalawade, a passionate IT Enthusiast with a background in Electronics & Telecommunication and a deep interest in Full-Stack Development, Cloud Computing, and modern programming technologies. I enjoy solving complex problems and crafting innovative solutions.
+            I am Ganesh Nalawade, a passionate IT Enthusiast with a background in Electronics & Telecommunication and a deep interest in Python Development, Cloud Computing, and modern programming technologies. I enjoy solving complex problems and crafting innovative solutions.
           </p>
           <p className={styles.description}>
             With expertise in Python, REST APIs, networking, and data structures, I continuously seek to learn and grow while contributing to impactful projects. I believe that technology has the power to transform lives and drive progress.

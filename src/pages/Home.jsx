@@ -11,9 +11,9 @@ const Home = () => {
   // ==== HERO SECTION LOGIC ====
   const skills = [
     'Python Software Developer',
-    'Full-Stack Developer',
     'Cloud Computing Enthusiast',
     'REST API',
+    'SQL',
     'Networking',
     'C',
     'Data Structures',
