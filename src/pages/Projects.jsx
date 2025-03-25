@@ -4,6 +4,7 @@ import intelligentsensebot from '../assets/Projects/intelligentsensebot.jfif';
 import FirmManagement from '../assets/Projects/FirmManagement.webp';
 import ProgrammingVisualizer from '../assets/Projects/ProgrammingVisualizer.webp';
 import SQLVisualizer from '../assets/Projects/SQLVisualizer.webp';
+import ML from '../assets/Projects/ML.webp'
 
 // Sample projects data
 const projectsData = [
@@ -16,10 +17,10 @@ const projectsData = [
   },
   {
     id: 2,
-    name: 'FirmManagement',
-    image: FirmManagement,
-    visitUrl: 'https://GaneshN523.github.io/FirmManagement/',
-    codeUrl: 'https://github.com/GaneshN523/FirmManagement/',
+    name: 'ML Projects',
+    image: ML,
+    visitUrl: ' https://ganeshn523.github.io/ML_APPs/',
+    codeUrl: 'https://github.com/GaneshN523/ML_APPs/',
   },
   {
     id: 3,
@@ -34,6 +35,14 @@ const projectsData = [
     image: SQLVisualizer,
     visitUrl: 'https://GaneshN523.github.io/sql-vi/',
     codeUrl: 'https://github.com/GaneshN523/sql-vi/',
+  },
+
+  {
+    id: 5,
+    name: 'FirmManagement',
+    image: FirmManagement,
+    visitUrl: 'https://GaneshN523.github.io/FirmManagement/',
+    codeUrl: 'https://github.com/GaneshN523/FirmManagement/',
   },
   // Add more projects as needed...
 ];
